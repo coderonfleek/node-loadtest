@@ -12,7 +12,7 @@ jobs:
     steps:
       - run:
           name: Run Load Test
-          command: "npx loadtest -c 10 --rps 200 https://$HEROKU_APP_NAME.herokuapp.com"
+          command: "npx loadtest -c 10 --rps 200 https://$HEROKU_APP_NAME.herokuapp.com/users/get"
 
 orbs:
   heroku: circleci/heroku@0.0.10
